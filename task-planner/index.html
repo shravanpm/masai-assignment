@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Task Planner</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <i class="fa-sharp fa-solid fa-list-check" style="color: #0f0f10"></i>
+        <h2>Tasks App</h2>
+      </div>
+      <div class="inputSection">
+        <div class="addTask">
+          <input type="text" placeholder="Add your task" id="taskInput" />
+          <button id="addTaskBtn">Add Task</button>
+          <button id="clearTasksBtn">Clear Tasks</button>
+        </div>
+        <div class="searchTask">
+          <input type="text" placeholder="Search your task" id="searchInput" />
+          <button id="searchTaskBtn">Search</button>
+          <button id="resetTasksBtn">Reset Search</button>
+        </div>
+      </div>
+
+      <div id="taskListContainer">
+        <div>
+          <h4>Tasks</h4>
+        </div>
+        <div id="taskList"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./javascript/index.js"></script>
+  </body>
+</html>
