@@ -71,15 +71,14 @@ taskInput.addEventListener("keydown", (event) => {
   }
 });
 
+const debouncingSearch = debouncer(searchTask, 1000);
+
+searchInput.addEventListener("keydown",(event)=>{
+debouncingSearch()
+})
+
 addTaskBtn.addEventListener("click", addTask);
 
-let searchTaskBtn = document.getElementById("searchTaskBtn");
-
-const debouncingSearch = debouncer(searchTask, 3000);
-
-searchTaskBtn.addEventListener("click", () => {
-  debouncingSearch();
-});
 
 let resetTaskBtn = document.getElementById("resetTasksBtn");
 resetTaskBtn.addEventListener("click", loadTasks);
